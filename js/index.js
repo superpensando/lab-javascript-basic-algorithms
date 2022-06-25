@@ -77,19 +77,13 @@ console.log(`the number of times the Latin word " et " appears in loremParagraph
 
 let phraseToCheck = "A man, a plan, a canal, Panama!";
 
-let phraseToCheck1="";
-for (let i=0; i < phraseToCheck.length; i++ ){
-    phraseToCheck1 += phraseToCheck[i];
-}
-console.log(phraseToCheck1); 
-
-let phraseToCheck2="";
+let phraseToCheckReverse="";
 for (let i=(phraseToCheck.length - 1); i >= 0 ; i-- ){
-    phraseToCheck2 += phraseToCheck[i];
+    phraseToCheckReverse += phraseToCheck[i];
 }
-console.log(phraseToCheck2);
+console.log(phraseToCheckReverse);
  
-if ( phraseToCheck1.localeCompare(phraseToCheck2, 'en', {sensitivity:'base', ignorePunctuation: true}) === 0 ){
+if ( phraseToCheck.localeCompare(phraseToCheckReverse, 'en', {sensitivity:'base', ignorePunctuation: true}) === 0 ){
     console.log(`This phrase is a Palindrome!`);
 } else {
     console.log(`This phrase isn't a Palindrome, try again`);
